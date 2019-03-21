@@ -11,9 +11,9 @@ Typically, people will be using some sort of ORM such as Hibernate to interact w
 - How can they ensure that they can go back to a safe state if some problem happens during their manual schema updates run? “Taking a backup before, doing the change, and rolling back if a problem arises perhaps?”
 - If they use branches for working on different tasks, how can they avoid the “oh, I was working on feature A and I changed the schema, so now that I’m on feature B the schema is broken”.
 
-Enter database schema migrations. Migrations are mechanism that allows you to solve all of the issues above. In this session we’ll know exactly what they’re and how we can use them in the context of PHP applications.
+Enter database schema migrations. Migrations are a mechanism that allows you to solve all of the issues above. In this session, we’ll know exactly what they’re and how we can use them in the context of PHP applications.
 
-I’d be remiss to no say that most PHP frameworks today already come with a database migration tool which you can use to construct and make changes to your database and easily share them through your version control system of choice. Though that is true, not all software is greenfield, a lot of it is brownfield. Thus, learning Phinx may still useful.
+I’d be remiss not to say that most PHP frameworks today already come with a database migration tool which you can use to construct and make changes to your database and easily share them through your version control system of choice. Though that is true, not all software is greenfield, a lot of it is brownfield. Thus, learning Phinx may still useful.
 
 This talk is about how we can design our databases in an evolutionary fashion by using database schema migrations, more specifically in the PHP language using the [Phinx](https://phinx.org) library.
 
