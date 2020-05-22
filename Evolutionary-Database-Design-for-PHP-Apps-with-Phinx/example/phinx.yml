@@ -1,0 +1,27 @@
+paths:
+    migrations: '%%PHINX_CONFIG_DIR%%/src/db/migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/src/db/seeds'
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+
+    development:
+        adapter: mysql
+        host: localhost
+        name: tomatoes
+        user: root
+        pass: ''
+        port: 3306
+        charset: utf8mb4
+
+    testing:
+        adapter: mysql
+        host: localhost
+        name: tomatoes_test
+        user: root
+        pass: ''
+        port: 3306
+        charset: utf8mb4
+
+version_order: creation

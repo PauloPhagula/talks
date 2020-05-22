@@ -1,0 +1,17 @@
+{
+    "name": "dareenzo/rottentomatoes",
+    "description": "A cheap rotten tomatoes clone",
+    "type": "project",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Paulo Phagula",
+            "email": "paulo.phagula@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "robmorgan/phinx": "dev-master"
+    }
+}
