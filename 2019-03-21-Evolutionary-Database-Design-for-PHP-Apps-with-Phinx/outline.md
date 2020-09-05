@@ -1,6 +1,6 @@
 # PHP migrations with Phinx
 
-## ME me me 
+## ME me me
 
 ## Why do we need migrations?
 
@@ -28,13 +28,13 @@
 
 ## Why use Phinx?
 
-- Super easy to install and setup 
-- Write migrations in Pure PHP or SQL 
-- Well documented 
+- Super easy to install and setup
+- Write migrations in Pure PHP or SQL
+- Well documented
 - Easy to integrate with your Deploy Tool
 - It’s Free and Open Source
 
-## What is Phinx? 
+## What is Phinx?
 
 - Phinx is a standalone command-line tool for managing database Migrations
 
@@ -42,28 +42,28 @@
 
 - Install `composer install phinx`
 - Setup `phinx init`
-- Checking status with `phinx status -e env` 
+- Checking status with `phinx status -e env`
 - Adding migrations `phinx create migrationName`
-- Migrating `phinx migrate -e env` 
+- Migrating `phinx migrate -e env`
 - Rolling back `phinx migrate -e env`
 
 ### The Example - Rotten Tomatoes clone
 
 ```yml
-Rating:	R (for violence, language throughout, and some sexual content/nudity) 
-Genre:Drama 
-Directed By:	Steve McQueen (III) 
-Written By: Steve McQueen (III), Gillian Flynn 
-In Theaters:	Nov 16, 2018  
-Wide On Disc/Streaming:	Feb 5, 2019 
-Runtime:128 minutes 
-Studio:	20th Century Fox
-Cast: 
-  - Viola Davis as Veronica 
+Rating: R (for violence, language throughout, and some sexual content/nudity)
+Genre:Drama
+Directed By:  Steve McQueen (III)
+Written By: Steve McQueen (III), Gillian Flynn
+In Theaters:  Nov 16, 2018
+Wide On Disc/Streaming: Feb 5, 2019
+Runtime:128 minutes
+Studio: 20th Century Fox
+Cast:
+  - Viola Davis as Veronica
   - Michelle Rodriguez as Linda
 ```
 
-## Migrating 
+## Migrating
 
 ```sh
 mkdir example # create folder for project
@@ -72,7 +72,7 @@ mkdir public src tests # make folders for code
 composer init # initialize composer
 
 # install phinx with composer
-composer require --dev robmorgan/phinx 
+composer require --dev robmorgan/phinx
 
 # initialize phinx
 vendor/bin/phinx init
@@ -80,13 +80,13 @@ vendor/bin/phinx init
 # Configure it and create folders for migrations and seeds
 mkdir -p src/db/migrations
 mkdir -p src/db/seeds
-````
+```
 
 The config file
 
-```yml 
-paths: 
-    migrations: '%%PHINX_CONFIG_DIR%%/src/db/migrations' 
+```yml
+paths:
+    migrations: '%%PHINX_CONFIG_DIR%%/src/db/migrations'
     seeds: '%%PHINX_CONFIG_DIR%%/src/db/seeds'
 
 environments:
@@ -116,7 +116,7 @@ version_order: creation
 
 `phinx create CreateMovieTable`
 
-```php 
+```php
 // create the table
 $movies = $this->table('movies');
 $movies
@@ -130,7 +130,7 @@ $movies
 # Do dry run
 phinx migrate -e development --dry-run
 # Migrate
-phinx migrate -e development 
+phinx migrate -e development
 # Check status
 phinx status -e development
 # Rollback
@@ -233,7 +233,7 @@ CREATE TABLE people (
 );
 
 CREATE TABLE movie_roles (
-  id int unsigned NOT NULL AUTO_INCREMENT, 
+  id int unsigned NOT NULL AUTO_INCREMENT,
   person_id int unsigned,
   movie_id int unsigned,
   role varchar(255),
