@@ -1,0 +1,133 @@
+* Meta-data :noexport:
+# http://orgmode.org/worg/exporters/beamer/tutorial.html
+#+TITLE: Cloud Computing with Amazon Web Services
+#+SUBTITLE: Getting Started
+#+AUTHOR: Paulo Phagula
+#+EMAIL:
+#+DATE: July 17, 2020
+#+DESCRIPTION:
+#+KEYWORDS:
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+#+OPTIONS: H:2
+#+OPTIONS: ^:{}
+#+REVEAL_THEME: white
+#+REVEAL_TRANS: linear
+#+REVEAL_PLUGINS: (highlight)
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: default
+#+BEAMER_FONT_THEME: default
+#+BEAMER_COLOR_THEME: dove
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+#+STARTUP: beamer
+#+LATEX_HEADER: %% No navigation bar
+  #+LATEX_HEADER: \setbeamertemplate{navigation symbols}{}
+  #+LATEX_HEADER: %% Page number with current/total format
+  #+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\scriptsize}
+  #+LATEX_HEADER: \setbeamertemplate{footline}[frame number]
+  #+LATEX_HEADER: \setbeamertemplate{frametitle}[default][center]
+  #+LATEX_HEADER: %% With item labels
+  #+LATEX_HEADER: \setbeamertemplate{bibliography item}{\insertbiblabel}
+  #+LATEX_HEADER: %% Without item labels
+  #+LATEX_HEADER: %% \setbeamertemplate{bibliography item}{}
+  #+LATEX_HEADER:
+  #+LATEX_HEADER: %% Math
+  #+LATEX_HEADER: \usepackage{amsmath}
+  #+LATEX_HEADER: \usepackage{amssymb}
+  #+LATEX_HEADER: \usepackage{wasysym}
+  #+LATEX_HEADER: %% Allow new page within align
+  #+LATEX_HEADER: \allowdisplaybreaks
+  #+LATEX_HEADER: \usepackage{cancel}
+  #+LATEX_HEADER: %% Code
+  #+LATEX_HEADER: \usepackage{listings}
+  #+LATEX_HEADER: \usepackage{courier}
+  #+LATEX_HEADER: \lstset{basicstyle=\footnotesize\ttfamily, breaklines=true, frame=single}
+  #+LATEX_HEADER: \usepackage[cache=false]{minted}
+  #+LATEX_HEADER: \usemintedstyle{vs}
+  #+LATEX_HEADER: %% Graphics
+  #+LATEX_HEADER: \usepackage{graphicx}
+  #+LATEX_HEADER: \usepackage{grffile}
+  #+LATEX_HEADER: %% DAG
+  #+LATEX_HEADER: \usepackage{tikz}
+  #+LATEX_HEADER: \usetikzlibrary{positioning,shapes.geometric}
+  #+LATEX_HEADER: %% Allow URL embedding
+  #+LATEX_HEADER: \usepackage{url}
+  #+LATEX_HEADER: %% Do not count backup slides.
+  #+LATEX_HEADER: %% https://tex.stackexchange.com/questions/70448/dont-count-backup-slides
+  #+LATEX_HEADER: \newcommand{\backupbegin}{
+  #+LATEX_HEADER:    \newcounter{finalframe}
+  #+LATEX_HEADER:    \setcounter{finalframe}{\value{framenumber}}
+  #+LATEX_HEADER: }
+  #+LATEX_HEADER: \newcommand{\backupend}{
+  #+LATEX_HEADER:    \setcounter{framenumber}{\value{finalframe}}
+  #+LATEX_HEADER: }
+# ############################################################################ #
+* What is cloud computing
+#+BEGIN_NOTES
+Your note
+#+END_NOTES
+** Sub1
+** Sub2
+* Why
+why
+#+BEGIN_SRC c++
+int main()
+{
+  cout << "Hello" << endl;
+}
+#+END_SRC
+
+* Uses
+uses
+* Types of Cloud Computing
+** Cloud Computing Models
+** Cloud Computing Deployment Models
+* Choices / Contenders
+aafa
+* Aspects that might influence your choice
+afaf
+* Fundamentals
+afafa
+* Refs
+ :PROPERTIES:
+ :BEAMER_opt: allowframebreaks,label=,t
+ :END:
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf
+- resf

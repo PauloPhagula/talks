@@ -1,0 +1,114 @@
+#+TITLE: Outline
+
+AWS Fundamentals: Going Cloud Native.  We covered a lot of territory.  We
+started with an introduction to AWS services, and then explored AWS Regions and
+infrastructure.  Next, we focused on some fundamental AWS services in the areas
+of compute, networking, storage, databases, monitoring, and scaling.  We
+finished up with an overview of security and cost management.
+
+* Title proposals
+- Getting your feet into cloud with (Amazon Lightsail | AWS)
+- Getting started with cloud computing on (Amazon Lightsail | AWS)
+* What
+* Why
+* Uses
+
+- one-man-band-man
+- startup
+- enterprise
+
+There's no right or wrong. Find what solves your problem and run with it.
+* Types of cloud computing
+* Choices / Contenders / Providers
+- Amazon Web Services - [[https://aws.amazon.com]]
+- Google Cloud Platform (GCP) & Firebase * [fn:1]
+- Oracle Cloud - [[https://www.oracle.com/index.html]]
+- Alibaba Cloud - [[https://www.alibabacloud.com/]]
+- Digital Ocean - [[https://www.digitalocean.com/]]
+- Heroku [fn:1]
+- Linode - IaSS [[https://www.linode.com/]]
+
+[fn:1] PaSS
+* Aspects that might influence choice
+** Maturity & Stability
+Maturity & Stability
+
+The maturity of AWS’ cloud offering seems to be an underlying theme connecting up most of these benefits. AWS has been around since 2002, but really hit their stride in 2006, focusing their efforts on EC2, cloud storage and SQS. By comparison, Azure doesn’t even get out of the gate until 2010. That sort of advantage is simply unheard of in tech.
+
+Amazon has been perfecting their cloud platform for longer than anyone, and those efforts have generated a very stable and mature product in AWS. If it feels like everyone else is playing catch up, it’s because they largely are. Many times it feels like its competitors are simply trying to match what AWS has already done while the AWS feature set just keeps evolving at a breakneck pace. They are the 800-lb gorilla in this space, dwarfing Azure’s market share by a factor of two with a bigger footprint than its next four competitors combined. There is a lot to be said with going with that kind of leadership.
+
+Refs:
+[[https://aws.amazon.com/blogs/aws/aws-named-as-a-cloud-leader-for-the-10th-consecutive-year-in-gartners-infrastructure-platform-services-magic-quadrant/][AWS Named as a Cloud Leader for the 10th Consecutive Year in Gartner’s Infras...]]
+
+** Eat Their Own Dog Food
+
+Amazon came to the cloud out of necessity, and not because the e Commerce giant wanted to save a couple bucks on their monthly web hosting bill. In 2000 while everyone else was endlessly fretting about Y2K, Amazon was desperately trying to scale. They started building servers internally to help facilitate their hyperbolic growth. While this helped, their development teams were spending months blocked by network administrators who were busily building out server infrastructure so the developers could start coding. Amazon created a cloud infrastructure service to automate these tasks, breathing new life into their project pipelines. These early systems would form the foundation for what is now AWS, giving them a 10 year head start on Microsoft.
+
+There are more than a few instances where an Amazon product morphed into an AWS service. For instance, their serverless product Lambda was first created by Amazon to run its widely popular virtual assistant Alexa. It was such an innovative solution that they decided to unleash it as a service to the AWS community.
+** Politics
+Example of US Government going with Microsoft rather than AWS
+** Pricing
+** Ecosystem
+* Cloud Computing on AWS
+* Fundamental services
+* The good parts
+- IAM
+- EC2
+- EBS
+- Dynamo DB
+- Lightsail
+* Example - Demo AWS EC2 and AWS S3
+
+Throughout this talk, we're going to be building out a twitter clone
+application to show everybody how different AWS services can work together to
+build an application.
+
+Given these requirements, minding AWS Well-Architected Framework, we're going to use the following architecture
+
+** Because in agile development we're advised to get going with deployments from the get go we'll do that from the beginning. Which will allow us to introduce our selfs to the cloud
+** Twitter clone called xirico/piu-piu.
+- Images are stored in S3 bucket and loaded with cloud front
+- Graph DB to store relations between followers
+- Text processors, to identify embedded content, handle formatting, handle emojis; find mentions and hashtags and
+  link to them. A good inspiration for this is in Umbraco CMS
+- Sentiment analyses to block hate speak
+- FTS to find tweets
+- Authentication & Session storage
+- Caching to speed up things. Rather compute the counts of followers and
+  retweets or other stats we can cache this
+- Background processing
+- CDN
+- Background processing
+- Use new SQL 2016 to process trees as to understand which tweet replies to
+  which one
+- Use tweet geo to suggest friends by proximity
+- [[https://developer.twitter.com/en/docs/twitter-api/data-dictionary/introduction]]
+- Instead of like use +1 or -1
+** App to register patients and medical history.
+Exam results, scans are stored in S3
+* Walkthrough
+#+begin_src
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+#+end_src
+* Testing auto-scaling
+Stress test with load impact
+* Common concerns
+** Cost
+** Security
+** Compliance & Governance
+* Resources
+- [[https://aws.amazon.com/free/][AWS Free Tier]]
+- [[https://aws.amazon.com/][Amazon Web Services (AWS) - Cloud Computing Services]]
+- [[https://www.youtube.com/channel/UCT-nPlVzJI-ccQXlxjSvJmw][AWS Online Tech Talks - YouTube Channel]]
+* Refs                                                                          :refs:
+- AWS the Good Parts by Daniel Vassalo
+- [[https://youtu.be/Q3Dxtkgsh9I][Building a Minimal, Production Ready Infrastructure on DigitalOcean - YouTube]]
+- [[https://www.educba.com/terraform-vs-ansible/][Terraform vs Ansible | Top 5 Differences to Learn with Infographics]]
+- [[https://youtu.be/U5suIJwobiQ][Using Infrastructure as Code to Build Reproducible Systems with Terraform on ...]]
+
+* Tools                                                                         :tools:
+ - awscli
+ - cloudformattion
+* Notes
+- AWS has a BIG problem. hint its not their competition. They're BIG
+- Use https://svgporn.com/ for logos

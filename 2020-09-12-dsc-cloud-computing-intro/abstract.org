@@ -1,0 +1,17 @@
+#+TITLE: Getting Started with Cloud Computing with AWS - Abstract
+
+
+When first starting, AWS can seem overwhelming. A cloud-native paradigm of
+building infrastructure can be a radical departure from the traditional
+on-premises way of doing things. And regardless if this is your first time
+working with infrastructure or you've been tuning Linux kernels for the last
+decade, it can be hard to know where to start with AWS's selection of over 175
+services.
+
+This talk is designed to help you get started with AWS regardless of your
+experience. We will talk about the five pillars of AWS, mental models to use
+when thinking about the cloud, and key concepts that will be applicable across
+any service you end up using.
+
+In this seminar, Arman Hezarkhani answers these three questions for students:
+What is Cloud? What is GCP? And, how can you get started?
