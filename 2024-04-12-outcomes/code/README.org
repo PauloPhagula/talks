@@ -1,0 +1,3 @@
+#+begin_src sh
+delta -s bind.rb map.rb
+#+end_src
